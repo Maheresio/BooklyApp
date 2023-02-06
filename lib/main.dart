@@ -1,5 +1,5 @@
-import 'package:bookly_app/constants.dart';
-import 'package:bookly_app/features/presentation/views/splash_view.dart';
+import 'constants.dart';
+import 'features/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/route_manager.dart';
