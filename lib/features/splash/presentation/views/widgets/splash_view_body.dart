@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
-import '../../../../core/utils/assets.dart';
+import '../../../../../constants.dart';
+import '../../../../../core/utils/assets.dart';
+import '../../../../home/presentation/views/home_view.dart';
 import 'sliding_text.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -19,17 +22,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   void initState() {
     super.initState();
-    _controller = AnimationController(
-      vsync: this,
-      duration: const Duration(
-        seconds: 4,
-      ),
-    );
-    _slidingAnimation =
-        Tween<Offset>(begin: const Offset(0, 2), end: Offset.zero).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.fastOutSlowIn),
-    );
-    _controller.forward();
+    initSlidingAnimation();
+    navigateToHome();
   }
 
   @override
@@ -54,5 +48,31 @@ class _SplashViewBodyState extends State<SplashViewBody>
       ),
     );
   }
-}
 
+  void initSlidingAnimation() {
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(
+        seconds: 4,
+      ),
+    );
+    _slidingAnimation =
+        Tween<Offset>(begin: const Offset(0, 2), end: Offset.zero).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.fastOutSlowIn),
+    );
+    _controller.forward();
+  }
+
+  void navigateToHome() {
+    Future.delayed(
+      const Duration(
+        seconds: 4,
+      ),
+      () => Get.to(()=>
+        const HomeView(),
+        duration: kTransitionDuration,
+        transition: Transition.fade,
+      ),
+    );
+  }
+}

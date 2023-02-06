@@ -1,8 +1,9 @@
-import 'constants.dart';
-import 'features/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/route_manager.dart';
+
+import 'constants.dart';
+import 'features/splash/presentation/views/splash_view.dart';
 
 void main() {
   runApp(const BooklyApp());
