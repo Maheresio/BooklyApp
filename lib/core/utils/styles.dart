@@ -6,7 +6,7 @@ abstract class Styles
 
   static final titleMeduim = TextStyle(
     fontWeight: FontWeight.w600,
-    fontSize: 18.sp,
+    fontSize: 16.sp,
   );
 
 
