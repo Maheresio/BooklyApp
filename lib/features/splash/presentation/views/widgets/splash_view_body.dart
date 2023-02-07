@@ -39,11 +39,15 @@ class _SplashViewBodyState extends State<SplashViewBody>
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(AssetData.logo),
+          Image.asset(
+            AssetData.logo,
+          ),
           SizedBox(
             height: 4.h,
           ),
-          SlidingText(slidingAnimation: _slidingAnimation),
+          SlidingText(
+            slidingAnimation: _slidingAnimation,
+          ),
         ],
       ),
     );
@@ -56,9 +60,14 @@ class _SplashViewBodyState extends State<SplashViewBody>
         seconds: 4,
       ),
     );
-    _slidingAnimation =
-        Tween<Offset>(begin: const Offset(0, 2), end: Offset.zero).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.fastOutSlowIn),
+    _slidingAnimation = Tween<Offset>(
+      begin: const Offset(0, 2),
+      end: Offset.zero,
+    ).animate(
+      CurvedAnimation(
+        parent: _controller,
+        curve: Curves.fastOutSlowIn,
+      ),
     );
     _controller.forward();
   }
@@ -68,8 +77,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
       const Duration(
         seconds: 4,
       ),
-      () => Get.to(()=>
-        const HomeView(),
+      () => Get.to(
+        () => const HomeView(),
         duration: kTransitionDuration,
         transition: Transition.fade,
       ),
