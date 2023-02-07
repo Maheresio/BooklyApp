@@ -1,6 +1,7 @@
+import '../../../../../constants.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:bookly_app/core/utils/assets.dart';
+import '../../../../../core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -9,9 +10,11 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: 24.w,
-        vertical: 30.h,
+      padding: EdgeInsetsDirectional.only(
+        start: kHorizontalPadding,
+        end: kHorizontalPadding,
+        top: 40.h,
+        bottom: 30.h
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -19,13 +22,13 @@ class CustomAppBar extends StatelessWidget {
           Image.asset(
             AssetData.logo,
             fit: BoxFit.cover,
-            height: 20.h,
+            height: 16.h,
           ),
           IconButton(
             onPressed: () {},
             icon: Icon(
               FontAwesomeIcons.magnifyingGlass,
-              size: 19.h,
+              size: 18.h,
             ),
           ),
         ],

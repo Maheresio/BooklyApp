@@ -1,3 +1,4 @@
+import 'custom_list_view.dart';
 import 'package:flutter/material.dart';
 
 import 'custom_app_bar.dart';
@@ -11,6 +12,7 @@ class HomeViewBody extends StatelessWidget {
       body: Column(
         children: const [
           CustomAppBar(),
+          FeaturedListView(),
         ],
       ),
     );
