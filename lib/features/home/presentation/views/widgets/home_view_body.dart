@@ -1,7 +1,9 @@
+import 'package:bookly_app/constants.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../../core/utils/styles.dart';
 import 'custom_app_bar.dart';
-import 'feature_list_view.dart';
+import 'featured_list_view.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -9,11 +11,25 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: const [
-          CustomAppBar(),
-          FeaturedListView(),
-        ],
+      body: Padding(
+        padding: EdgeInsetsDirectional.only(
+          start: kHorizontalPadding,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const CustomAppBar(),
+            const FeaturedListView(),
+            SizedBox(
+              height: 30.h,
+            ),
+            Text(
+              'Best Seller',
+              textAlign: TextAlign.start,
+              style: Styles.titleMeduim,
+            )
+          ],
+        ),
       ),
     );
   }
