@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../constants.dart';
 import '../../../../../core/utils/styles.dart';
 import 'best_seller_list_view.dart';
-import 'custom_app_bar.dart';
+import 'custom_home_app_bar.dart';
 import 'featured_list_view.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -23,7 +23,7 @@ class HomeViewBody extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const CustomAppBar(),
+                  const CustomHomeAppBar(),
                   const FeaturedListView(),
                   SizedBox(
                     height: 42.h,

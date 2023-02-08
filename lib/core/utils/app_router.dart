@@ -3,7 +3,7 @@ import '../../features/home/presentation/views/home_view.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
 import 'package:go_router/go_router.dart';
 
-abstract class AppRoutes {
+abstract class AppRouter {
   static const kHomeView = '/homeView';
   static const kBookDetailsView = '/bookDetailsView';
 
