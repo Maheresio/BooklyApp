@@ -1,10 +1,9 @@
+import '../../../../../core/utils/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
-import '../../../../../constants.dart';
 import '../../../../../core/utils/assets.dart';
-import '../../../../home/presentation/views/home_view.dart';
 import 'sliding_text.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -77,10 +76,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
       const Duration(
         seconds: 4,
       ),
-      () => Get.to(
-        () => const HomeView(),
-        duration: kTransitionDuration,
-        transition: Transition.fade,
+      () => GoRouter.of(context).pushReplacement(
+        AppRoutes.kHomeView,
       ),
     );
   }

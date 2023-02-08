@@ -9,6 +9,7 @@ class BestSellerListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return  ListView.separated(
       itemCount: 10,
+      shrinkWrap: true,
       padding: EdgeInsets.zero,
       physics:const NeverScrollableScrollPhysics(),
       scrollDirection: Axis.vertical,
