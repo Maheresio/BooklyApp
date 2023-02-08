@@ -17,7 +17,7 @@ class FeaturedListView extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         itemBuilder: (context, index) => const FeaturedListViewItem(),
         separatorBuilder: (context, index) => SizedBox(
-          width: 10.w,
+          width: 12.w,
         ),
       ),
     );
