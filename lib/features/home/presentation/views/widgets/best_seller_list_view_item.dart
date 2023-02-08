@@ -15,7 +15,6 @@ class BestSellerListViewItem extends StatelessWidget {
         Container(
           width: 60.w,
           height: 90.h,
-          clipBehavior: Clip.hardEdge,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(
               15,
@@ -31,52 +30,50 @@ class BestSellerListViewItem extends StatelessWidget {
           padding: EdgeInsetsDirectional.only(
             start: kHorizontalPadding,
           ),
-          child: Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * .55,
-                  child: Text(
-                    'Harry Potter and the Goblet of Fire',
-                    style: Styles.textStyle20.copyWith(
-                      fontFamily: kGTSectraFine,
-                      fontWeight: FontWeight.normal,
-                    ),
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 2,
-                  ),
-                ),
-                SizedBox(
-                  height: 1.h,
-                ),
-                Text(
-                  'J.K. Rowling',
-                  style: Styles.textStyle14.copyWith(
-                    fontWeight: FontWeight.w500,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: MediaQuery.of(context).size.width * .55,
+                child: Text(
+                  'Harry Potter and the Goblet of Fire',
+                  style: Styles.textStyle20.copyWith(
+                    fontFamily: kGTSectraFine,
+                    fontWeight: FontWeight.normal,
                   ),
                   overflow: TextOverflow.ellipsis,
-                  maxLines: 1,
+                  maxLines: 2,
                 ),
-                SizedBox(
-                  height: 1.h,
+              ),
+              SizedBox(
+                height: 1.h,
+              ),
+              Text(
+                'J.K. Rowling',
+                style: Styles.textStyle14.copyWith(
+                  fontWeight: FontWeight.w500,
                 ),
-                Row(
-                  children: [
-                    Text(
-                      '19.99 €',
-                      style: Styles.textStyle20,
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 1,
-                    ),
-                    SizedBox(
-                      width: 35.w,
-                    ),
-                    const BookRating(),
-                     ],
-                ),
-              ],
-            ),
+                overflow: TextOverflow.ellipsis,
+                maxLines: 1,
+              ),
+              SizedBox(
+                height: 1.h,
+              ),
+              Row(
+                children: [
+                  Text(
+                    '19.99 €',
+                    style: Styles.textStyle20,
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                  ),
+                  SizedBox(
+                    width: 35.w,
+                  ),
+                  const BookRating(),
+                ],
+              ),
+            ],
           ),
         )
       ],
