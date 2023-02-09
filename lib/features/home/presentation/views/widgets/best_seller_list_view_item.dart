@@ -48,13 +48,16 @@ class BestSellerListViewItem extends StatelessWidget {
               SizedBox(
                 height: 1.h,
               ),
-              Text(
-                'J.K. Rowling',
-                style: Styles.textStyle14.copyWith(
-                  fontWeight: FontWeight.w500,
+              Opacity(
+                opacity: 0.7,
+                child: Text(
+                  'J.K. Rowling',
+                  style: Styles.textStyle14.copyWith(
+                    fontWeight: FontWeight.w500,
+                  ),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
                 ),
-                overflow: TextOverflow.ellipsis,
-                maxLines: 1,
               ),
               SizedBox(
                 height: 1.h,
