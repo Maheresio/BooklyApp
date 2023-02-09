@@ -1,7 +1,8 @@
-import 'package:bookly_app/core/utils/styles.dart';
-import 'package:bookly_app/features/home/presentation/views/widgets/book_rating.dart';
-import 'package:bookly_app/features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
-import 'package:bookly_app/features/home/presentation/views/widgets/featured_list_view_item.dart';
+import '../../../../../core/utils/styles.dart';
+import 'book_action_button.dart';
+import 'book_rating.dart';
+import 'custom_book_details_app_bar.dart';
+import 'featured_list_view_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,7 +15,10 @@ class BookDetailsViewBody extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         const Padding(
-          padding: EdgeInsetsDirectional.only(top: 20, bottom: 36),
+          padding: EdgeInsetsDirectional.only(
+            top: 20,
+            bottom: 36,
+          ),
           child: CustomBookDetailsAppBar(),
         ),
         Padding(
@@ -41,6 +45,7 @@ class BookDetailsViewBody extends StatelessWidget {
             'Rudyard Kipling',
             style: Styles.textStyle18.copyWith(
               fontWeight: FontWeight.w500,
+              fontStyle: FontStyle.italic,
             ),
           ),
         ),
@@ -48,6 +53,10 @@ class BookDetailsViewBody extends StatelessWidget {
           height: 14,
         ),
         const BookRating(),
+        const SizedBox(
+          height: 37,
+        ),
+        const BookActionButton(),
       ],
     );
   }
