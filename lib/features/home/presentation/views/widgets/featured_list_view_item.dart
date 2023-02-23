@@ -10,7 +10,7 @@ class FeaturedListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: ()=>GoRouter.of(context).push(AppRouter.kBookDetailsView),
+      onTap: () => GoRouter.of(context).push(AppRouter.kBookDetailsView),
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(

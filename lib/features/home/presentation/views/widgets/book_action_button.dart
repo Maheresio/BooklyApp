@@ -17,10 +17,8 @@ class BookActionButton extends StatelessWidget {
           child: CustomButton(
             backgroundColor: Colors.white,
             text: '19.99€',
-            style: Styles.textStyle18.copyWith(
-              fontWeight: FontWeight.bold,
-              color: Colors.black
-            ),
+            style: Styles.textStyle18
+                .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
             borderRadius: const BorderRadius.only(
               bottomLeft: Radius.circular(12),
               topLeft: Radius.circular(12),
@@ -31,10 +29,9 @@ class BookActionButton extends StatelessWidget {
           child: CustomButton(
             backgroundColor: AppColors.kbuttonColor,
             style: Styles.textStyle18.copyWith(
-              fontFamily: kGilroy,
-              fontWeight: FontWeight.w400,
-              color: Colors.white
-            ),
+                fontFamily: kGilroy,
+                fontWeight: FontWeight.w400,
+                color: Colors.white),
             borderRadius: const BorderRadius.only(
               bottomRight: Radius.circular(12),
               topRight: Radius.circular(12),

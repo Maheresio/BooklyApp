@@ -23,4 +23,3 @@ class FeaturedListView extends StatelessWidget {
     );
   }
 }
-

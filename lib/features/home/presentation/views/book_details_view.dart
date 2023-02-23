@@ -13,7 +13,7 @@ class BookDetailsView extends StatelessWidget {
         padding: EdgeInsets.symmetric(
           horizontal: kHorizontalPadding,
         ),
-        child:const SafeArea(
+        child: const SafeArea(
           child: BookDetailsViewBody(),
         ),
       ),

@@ -17,7 +17,7 @@ class HomeViewBody extends StatelessWidget {
           start: kHorizontalPadding,
         ),
         child: CustomScrollView(
-          physics:const BouncingScrollPhysics(),
+          physics: const BouncingScrollPhysics(),
           slivers: [
             SliverToBoxAdapter(
               child: Column(

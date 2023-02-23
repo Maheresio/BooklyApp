@@ -1,4 +1,3 @@
-abstract class AppStrings
-{
-    static const freePreview='Free Preview';
+abstract class AppStrings {
+  static const freePreview = 'Free Preview';
 }
