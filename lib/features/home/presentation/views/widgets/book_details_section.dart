@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/utils/styles.dart';
 import 'book_action_button.dart';
 import 'book_rating.dart';
-import 'featured_list_view_item.dart';
+import 'custom_book_image.dart';
 
 class BookDetailsSection extends StatelessWidget {
   const BookDetailsSection({super.key});
@@ -17,7 +17,7 @@ class BookDetailsSection extends StatelessWidget {
           padding: EdgeInsets.symmetric(
             horizontal: 75.w,
           ),
-          child: const FeaturedListViewItem(),
+          child: const CustomBookImage(imageUrl: '',),
         ),
         const SizedBox(
           height: 37,

@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/widgets/custom_circular_indicator.dart';
-import 'featured_list_view_item.dart';
+import 'custom_book_image.dart';
 
 class FeaturedListView extends StatelessWidget {
   const FeaturedListView({super.key});
@@ -19,12 +19,13 @@ class FeaturedListView extends StatelessWidget {
             height: 200.h,
             width: double.infinity,
             child: ListView.separated(
-              itemCount: 10,
+              itemCount: state.books.length,
               scrollDirection: Axis.horizontal,
               physics: const BouncingScrollPhysics(),
-              itemBuilder: (context, index) => const FeaturedListViewItem(),
+              itemBuilder: (context, index) => CustomBookImage(
+                  imageUrl: state.books[index].volumeInfo.imageLinks.thumbnail),
               separatorBuilder: (context, index) => SizedBox(
-                width: 12.w,
+                width: 14.w,
               ),
             ),
           );
