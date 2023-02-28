@@ -1,9 +1,10 @@
-import '../../../../../core/utils/app_colors.dart';
-import '../../../../../core/utils/styles.dart';
-import '../../../../home/presentation/views/widgets/best_seller_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/styles.dart';
+import '../../../../home/presentation/views/widgets/best_seller_list_view.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});

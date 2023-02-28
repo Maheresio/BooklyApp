@@ -1,11 +1,10 @@
+import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
+import '../../../../core/error/failure.dart';
 import '../../../../core/utils/api_service.dart';
 import '../models/book_model/book_model.dart';
 import 'home_repo.dart';
-import 'package:dartz/dartz.dart';
-
-import '../../../../core/error/failure.dart';
 
 class HomeRepoImpl implements HomeRepo {
   ApiService apiService;
