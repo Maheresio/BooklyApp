@@ -18,4 +18,3 @@ class NewestBooksCubit extends Cubit<NewestBooksState> {
         (books) => emit(NewestBooksSuccess(books)));
   }
 }
-
