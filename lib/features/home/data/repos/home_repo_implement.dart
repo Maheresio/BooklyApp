@@ -12,11 +12,10 @@ class HomeRepoImpl implements HomeRepo {
   HomeRepoImpl(this.apiService);
 
   @override
-  Type getFeaturedBooks() async{
- try {
+  Type getFeaturedBooks() async {
+    try {
       var data = await apiService.get(
-          endpoint:
-              'volumes?q=subject:programming&filtering=free-ebooks');
+          endpoint: 'volumes?q=subject:programming&filtering=free-ebooks');
       List<BookModel> books = [];
       for (var item in data['items']) {
         books.add(BookModel.fromJson(item));
@@ -25,7 +24,8 @@ class HomeRepoImpl implements HomeRepo {
     } catch (e) {
       if (e is DioError) return left(ServerFailure.fromDioError(e));
       return left(ServerFailure(e.toString()));
-    }  }
+    }
+  }
 
   @override
   Type getNewestBooks() async {
