@@ -22,7 +22,7 @@ final BookModel bookModel;
                 top: 5.h,
                 bottom: 5.h,
               ),
-              child: CustomBookDetailsAppBar(),
+              child:const CustomBookDetailsAppBar(),
             ),
             BookDetailsSection(bookModel: bookModel),
            
