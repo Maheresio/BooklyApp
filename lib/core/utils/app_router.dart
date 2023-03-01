@@ -1,4 +1,5 @@
 import 'package:bookly_app/core/utils/service_locator.dart';
+import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/features/home/data/repos/home_repo_implement.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -34,8 +35,8 @@ abstract class AppRouter {
           return BlocProvider(
             create: (context) => SimilarBooksCubit(
               getIt.get<HomeRepoImpl>(),
-            )..getSimilarBooks(),
-            child: const BookDetailsView(),
+            ),
+            child:  BookDetailsView(bookModel: state.extra  as BookModel),
           );
         },
       ),

@@ -20,7 +20,8 @@ final BookModel bookModel;
           height: 110.h,
           width: 80.w,
           child: CustomBookImage(
-              imageUrl: bookModel.volumeInfo.imageLinks.thumbnail),
+    
+              bookModel: bookModel),
         ),
        
         Padding(

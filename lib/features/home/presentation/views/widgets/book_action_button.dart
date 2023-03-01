@@ -16,7 +16,7 @@ class BookActionButton extends StatelessWidget {
         Expanded(
           child: CustomButton(
             backgroundColor: Colors.white,
-            text: '19.99€',
+            text: 'Free',
             style: Styles.textStyle18
                 .copyWith(fontWeight: FontWeight.bold, color: Colors.black),
             borderRadius: const BorderRadius.only(

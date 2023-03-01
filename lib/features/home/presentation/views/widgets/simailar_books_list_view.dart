@@ -23,7 +23,7 @@ class SimilarBookslistView extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               physics: const BouncingScrollPhysics(),
               itemBuilder: (context, index) => CustomBookImage(
-                imageUrl: state.books[index].volumeInfo.imageLinks.thumbnail,
+                bookModel: state.books[index],
               ),
               separatorBuilder: (context, index) => SizedBox(
                 width: 12.w,
