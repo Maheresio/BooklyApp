@@ -22,7 +22,7 @@ class BookRating extends StatelessWidget {
           width: 5.w,
         ),
         Text(
-          '4.8',
+          '0',
           style: Styles.textStyle16,
           overflow: TextOverflow.ellipsis,
           maxLines: 1,
@@ -33,7 +33,7 @@ class BookRating extends StatelessWidget {
         Opacity(
           opacity: 0.5,
           child: Text(
-            '(2390)',
+            '(0)',
             style: Styles.textStyle14,
             overflow: TextOverflow.ellipsis,
             maxLines: 1,

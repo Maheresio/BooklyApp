@@ -14,7 +14,7 @@ class CustomHomeAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsetsDirectional.only(
-          end: kHorizontalPadding, top: 40.h, bottom: 40.h),
+          end: kHorizontalPadding, top: 40.h, bottom: 20.h),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

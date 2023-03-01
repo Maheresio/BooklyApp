@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../constants.dart';
 import '../../../../../core/utils/styles.dart';
-import 'best_seller_list_view.dart';
+import 'newest_books_list_view.dart';
 import 'custom_home_app_bar.dart';
 import 'featured_list_view.dart';
 
@@ -29,9 +29,10 @@ class HomeViewBody extends StatelessWidget {
                     height: 42.h,
                   ),
                   Text(
-                    'Best Seller',
+                    'Newest Books',
                     textAlign: TextAlign.start,
-                    style: Styles.textStyle18,
+                    style: Styles.textStyle20
+                        .copyWith(fontWeight: FontWeight.bold, fontFamily: ''),
                   ),
                   SizedBox(
                     height: 17.h,
@@ -40,7 +41,7 @@ class HomeViewBody extends StatelessWidget {
               ),
             ),
             const SliverToBoxAdapter(
-              child: BestSellerListView(),
+              child: NewestBooksListView(),
             ),
           ],
         ));

@@ -2,31 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../constants.dart';
-import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/styles.dart';
+import '../../../data/models/book_model/book_model.dart';
 import 'book_rating.dart';
+import 'custom_book_image.dart';
 
-class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
+class NewestBooksListViewItem extends StatelessWidget {
+  const NewestBooksListViewItem({super.key, required this.bookModel});
 
+final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
-          width: 60.w,
-          height: 90.h,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(
-              15,
-            ),
-            color: Colors.red,
-          ),
-          child: Image.asset(
-            AssetData.book1,
-            fit: BoxFit.cover,
-          ),
+          SizedBox(
+          height: 110.h,
+          width: 80.w,
+          child: CustomBookImage(
+              imageUrl: bookModel.volumeInfo.imageLinks.thumbnail),
         ),
+       
         Padding(
           padding: EdgeInsetsDirectional.only(
             start: kHorizontalPadding,
@@ -37,7 +33,7 @@ class BestSellerListViewItem extends StatelessWidget {
               SizedBox(
                 width: MediaQuery.of(context).size.width * .55,
                 child: Text(
-                  'Harry Potter and the Goblet of Fire',
+                  bookModel.volumeInfo.title!,
                   style: Styles.textStyle20.copyWith(
                     fontFamily: kGTSectraFine,
                     fontWeight: FontWeight.normal,
@@ -47,12 +43,12 @@ class BestSellerListViewItem extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 1.h,
+                height: 6.h,
               ),
               Opacity(
                 opacity: 0.7,
                 child: Text(
-                  'J.K. Rowling',
+                  bookModel.volumeInfo.authors!.first,
                   style: Styles.textStyle14.copyWith(
                     fontWeight: FontWeight.w500,
                   ),
@@ -61,18 +57,18 @@ class BestSellerListViewItem extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 1.h,
+                height: 6.h,
               ),
               Row(
                 children: [
                   Text(
-                    '19.99 €',
-                    style: Styles.textStyle20,
+                    'Free',
+                    style: Styles.textStyle18,
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                   ),
                   SizedBox(
-                    width: 35.w,
+                    width: 90.w,
                   ),
                   const BookRating(),
                 ],

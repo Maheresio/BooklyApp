@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/styles.dart';
-import '../../../../home/presentation/views/widgets/best_seller_list_view.dart';
+import '../../../../home/presentation/views/widgets/newest_books_list_view.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
@@ -41,7 +41,7 @@ class SearchViewBody extends StatelessWidget {
           height: 20.h,
         ),
         const Expanded(
-          child: BestSellerListView(
+          child: NewestBooksListView(
             physics: BouncingScrollPhysics(),
           ),
         ),
