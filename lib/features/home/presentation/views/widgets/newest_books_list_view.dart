@@ -19,10 +19,8 @@ class NewestBooksListView extends StatelessWidget {
         if (state is NewestBooksSuccess) {
           return ListView.separated(
             itemCount: state.books.length,
-            shrinkWrap: true,
             padding: EdgeInsets.zero,
             physics: physics,
-            scrollDirection: Axis.vertical,
             itemBuilder: (context, index) =>
                 NewestBooksListViewItem(bookModel: state.books[index]),
             separatorBuilder: (context, index) => SizedBox(

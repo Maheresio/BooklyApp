@@ -6,14 +6,13 @@ import 'custom_snack_bar.dart';
 Future<void> customUrlLauncher(BuildContext context, String? url) async {
   if (url != null) {
     final Uri parsedUrl = Uri.parse(url);
-    if (await canLaunchUrl(parsedUrl)) {
+
+    try {
       await launchUrl(parsedUrl);
-    } else {
+    } catch (e) {
       if (context.mounted) {
         customSnackBar(context, 'Cannot launch $url');
       }
     }
   }
 }
-
-

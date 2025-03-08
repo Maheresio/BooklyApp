@@ -13,37 +13,33 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsetsDirectional.only(
-          start: kHorizontalPadding,
+      padding: EdgeInsetsDirectional.only(start: kHorizontalPadding),
+      child: NestedScrollView(
+        headerSliverBuilder: (context, innerBoxIsScrolled) => [
+          SliverToBoxAdapter(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const CustomHomeAppBar(),
+                const FeaturedListView(),
+                SizedBox(height: 42.h),
+                Text(
+                  'Newest Books',
+                  textAlign: TextAlign.start,
+                  style: Styles.textStyle20.copyWith(
+                    fontWeight: FontWeight.bold,
+                    fontFamily: '',
+                  ),
+                ),
+                SizedBox(height: 17.h),
+              ],
+            ),
+          ),
+        ],
+        body: const NewestBooksListView(
+          physics: BouncingScrollPhysics(),
         ),
-        child: CustomScrollView(
-          physics: const BouncingScrollPhysics(),
-          slivers: [
-            SliverToBoxAdapter(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const CustomHomeAppBar(),
-                  const FeaturedListView(),
-                  SizedBox(
-                    height: 42.h,
-                  ),
-                  Text(
-                    'Newest Books',
-                    textAlign: TextAlign.start,
-                    style: Styles.textStyle20
-                        .copyWith(fontWeight: FontWeight.bold, fontFamily: ''),
-                  ),
-                  SizedBox(
-                    height: 17.h,
-                  ),
-                ],
-              ),
-            ),
-            const SliverToBoxAdapter(
-              child: NewestBooksListView(),
-            ),
-          ],
-        ));
+      ),
+    );
   }
 }

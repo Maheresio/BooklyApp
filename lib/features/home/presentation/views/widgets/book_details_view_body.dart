@@ -8,27 +8,26 @@ import 'similar_books_section.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key, required this.bookModel});
-final BookModel bookModel;
+  final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
         SliverFillRemaining(
-            child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children:  [
-             Padding(
-              padding: EdgeInsetsDirectional.only(
-                top: 5.h,
-                bottom: 5.h,
+          hasScrollBody: false,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Padding(
+                padding: EdgeInsetsDirectional.only(top: 5.h, bottom: 5.h),
+                child: const CustomBookDetailsAppBar(),
               ),
-              child:const CustomBookDetailsAppBar(),
-            ),
-            BookDetailsSection(bookModel: bookModel),
-           
-            const Expanded(child: SimilarBooksSection()),
-          ],
-        )),
+              BookDetailsSection(bookModel: bookModel),
+              SizedBox(height: 20.h),
+              SizedBox(height: 160.h, child: const SimilarBooksSection()),
+            ],
+          ),
+        ),
       ],
     );
   }

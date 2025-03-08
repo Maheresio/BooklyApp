@@ -14,52 +14,35 @@ class BookDetailsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: .69.sh,
-      child: Column(
-        children: [
-          Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: 75.w,
-            ),
-            child:  CustomBookImage(
-             bookModel: bookModel,
-            ),
-          ),
-          const SizedBox(
-            height: 37,
-          ),
-          Text(
-            bookModel.volumeInfo.title!,
-            textAlign: TextAlign.center,
-            maxLines: 2,
-            style: Styles.textStyle30.copyWith(
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          const SizedBox(
-            height: 6,
-          ),
-          Opacity(
-            opacity: 0.7,
-            child: Text(
-              bookModel.volumeInfo.authors?.first??'',
-              style: Styles.textStyle18.copyWith(
-                fontWeight: FontWeight.w500,
-                fontStyle: FontStyle.italic,
-              ),
+    return Column(
+      children: [
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 75.w),
+          child: CustomBookImage(bookModel: bookModel),
+        ),
+        const SizedBox(height: 37),
+        Text(
+          bookModel.volumeInfo.title!,
+          textAlign: TextAlign.center,
+          maxLines: 2,
+          style: Styles.textStyle30.copyWith(fontWeight: FontWeight.bold),
+        ),
+        const SizedBox(height: 6),
+        Opacity(
+          opacity: 0.7,
+          child: Text(
+            bookModel.volumeInfo.authors?.first ?? '',
+            style: Styles.textStyle18.copyWith(
+              fontWeight: FontWeight.w500,
+              fontStyle: FontStyle.italic,
             ),
           ),
-          const SizedBox(
-            height: 14,
-          ),
-          const BookRating(),
-           SizedBox(
-            height: 15.h,
-          ),
-           BookActionButton(bookModel: bookModel,),
-        ],
-      ),
+        ),
+        const SizedBox(height: 14),
+        const BookRating(),
+        SizedBox(height: 15.h),
+        BookActionButton(bookModel: bookModel),
+      ],
     );
   }
 }

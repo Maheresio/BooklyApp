@@ -10,74 +10,71 @@ import 'custom_book_image.dart';
 class NewestBooksListViewItem extends StatelessWidget {
   const NewestBooksListViewItem({super.key, required this.bookModel});
 
-final BookModel bookModel;
+  final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
+    return Padding(
+      padding: EdgeInsetsDirectional.only(end: kHorizontalPadding),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
           SizedBox(
-          height: 110.h,
-          width: 80.w,
-          child: CustomBookImage(
-    
-              bookModel: bookModel),
-        ),
-       
-        Padding(
-          padding: EdgeInsetsDirectional.only(
-            start: kHorizontalPadding,
+            height: 110.h,
+            width: 80.w,
+            child: CustomBookImage(bookModel: bookModel),
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                width: MediaQuery.of(context).size.width * .55,
-                child: Text(
-                  bookModel.volumeInfo.title!,
-                  style: Styles.textStyle20.copyWith(
-                    fontFamily: kGTSectraFine,
-                    fontWeight: FontWeight.normal,
-                  ),
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 2,
-                ),
-              ),
-              SizedBox(
-                height: 6.h,
-              ),
-              Opacity(
-                opacity: 0.7,
-                child: Text(
-                  bookModel.volumeInfo.authors!.first,
-                  style: Styles.textStyle14.copyWith(
-                    fontWeight: FontWeight.w500,
-                  ),
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 1,
-                ),
-              ),
-              SizedBox(
-                height: 6.h,
-              ),
-              Row(
+
+          Expanded(
+            child: Padding(
+              padding: EdgeInsetsDirectional.only(start: kHorizontalPadding),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Free',
-                    style: Styles.textStyle18,
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
                   SizedBox(
-                    width: 90.w,
+                    width: MediaQuery.of(context).size.width * .55,
+                    child: Text(
+                      bookModel.volumeInfo.title!,
+                      style: Styles.textStyle20.copyWith(
+                        fontFamily: kGTSectraFine,
+                        fontWeight: FontWeight.normal,
+                      ),
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 2,
+                    ),
                   ),
-                  const BookRating(),
+                  SizedBox(height: 6.h),
+                  Opacity(
+                    opacity: 0.7,
+                    child: Text(
+                      bookModel.volumeInfo.authors!.first,
+                      style: Styles.textStyle14.copyWith(
+                        fontWeight: FontWeight.w500,
+                      ),
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                    ),
+                  ),
+                  SizedBox(height: 12.h),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          'Free',
+                          style: Styles.textStyle18,
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                        ),
+                      ),
+                      const BookRating(),
+                    ],
+                  ),
                 ],
               ),
-            ],
+            ),
           ),
-        )
-      ],
+        ],
+      ),
     );
   }
 }
