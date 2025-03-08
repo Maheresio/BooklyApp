@@ -5,7 +5,7 @@
 ## 🎥 App Showcase
 
 ### 🎮 Video Demonstration
-[🎥 Watch App Demo](#) *(https://drive.google.com/file/d/1uyLTBWTL45-osJlSXxGB_5PRnRenOB5d/view?usp=sharing)*
+[🎥 Watch App Demo](https://drive.google.com/file/d/1uyLTBWTL45-osJlSXxGB_5PRnRenOB5d/view?usp=sharing)
 
 ### 📱 Screenshots
 <p align="center">
