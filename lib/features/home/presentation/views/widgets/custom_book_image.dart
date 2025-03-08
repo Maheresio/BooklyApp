@@ -1,9 +1,9 @@
-import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/utils/app_router.dart';
+import '../../../data/models/book_model/book_model.dart';
 
 class CustomBookImage extends StatelessWidget {
   const CustomBookImage({super.key, required this.bookModel});

@@ -1,7 +1,8 @@
-import 'api_service.dart';
-import '../../features/home/data/repos/home_repo_implement.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
+
+import '../../features/home/data/repos/home_repo_implement.dart';
+import 'api_service.dart';
 
 final getIt = GetIt.instance;
 

@@ -1,5 +1,5 @@
-import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
-import 'package:bookly_app/features/home/presentation/manager/similar_books/similar_books_cubit.dart';
+import '../../data/models/book_model/book_model.dart';
+import '../manager/similar_books/similar_books_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
