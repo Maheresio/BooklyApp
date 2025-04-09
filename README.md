@@ -102,5 +102,3 @@ This project was developed by **Ahmed Maher**, a passionate Flutter developer wi
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/ahmed-gamal517/bookly-app/issues).
 
 ---
-
-This documentation provides an overview of the **Bookly App**, its features, and how to get started. If you have any questions or need further assistance, feel free to reach out! 😊
