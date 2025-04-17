@@ -15,7 +15,7 @@
   <img src="4.png" width="200" />
 </p>
 
-## 🚀 Project Overview
+##  Project Overview
 
 Bookly is a Flutter-based book discovery app designed to help users explore and find free books. The app integrates with the Google Books API to fetch book details, including titles, authors, descriptions, and cover images. It features a clean and modern UI, state management using Cubit, and follows Clean Architecture principles for maintainability and scalability.
 
